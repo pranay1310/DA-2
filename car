@@ -1,0 +1,42 @@
+#include <stdio.h>
+int main() {
+    char car[10];
+    float price,fitting,total,discount,gst,net;
+    printf("Enter the type of car ");
+    scanf("%s",car);
+    printf("Enter the price of the car: ");
+    scanf("%f",&price);
+    printf("Enter the fitting price of the car: ");
+    scanf("%f",&fitting);
+    if (strcmp(car,"Hatchback")==0){
+        total=price+fitting;
+        discount=total*0.03;
+        gst=(total-discount)*0.12;
+        net=total-discount+gst;
+    }
+    else if (strcmp(car,"Sedan")==0){
+        total=price+fitting;
+        discount=total*0.05;
+        gst=(total-discount)*0.12;
+        net=total-discount+gst;
+    }
+    else if (strcmp(car,"SUV")==0){
+        total=price+fitting;
+        discount=total*0.10;
+        gst=(total-discount)*0.12;
+        net=total-discount+gst;
+    }
+    else if (strcmp(car,"MUV")==0){
+        total=price+fitting;
+        discount=total*0.15;
+        gst=(total-discount)*0.12;
+        net=total-discount+gst;
+    }
+    else {
+        printf("incorrect");
+    }
+    printf("Total amount: %.2f\n",total);
+    printf("Discount: %.2f\n",discount);
+    printf("GST: %.2f\n",gst);
+    printf("amount to be paid: %.2f\n",net);
+}

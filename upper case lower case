@@ -1,0 +1,29 @@
+#include <string.h>
+#include <stdio.h>
+int main(){
+    int v,c,sp,spe,l,i=0,w=0;
+    char a[100];
+    gets(a);
+    l=strlen(a);
+    for (i=0;i<l;i++){
+        if (a[i]=='A'||a[i]=='E'||a[i]=='I'||a[i]=='O'||a[i]=='U'a[i]=='B'||a[i]=='C'||a[i]=='D'||a[i]=='F'||a[i]=='G'||a[i]=='H'||a[i]=='J'||a[i]=='N'||a[i]=='M'||a[i]=='L'||a[i]=='K'||a[i]=='P'||a[i]=='Q'||a[i]=='R'||a[i]=='S'||a[i]=='W'||a[i]=='V'||a[i]=='T'||a[i]=='X'||a[i]=='Y'||a[i]=='Z'){
+            v=v+1;
+        }
+        else if( a[i]=='a'||a[i]=='e'||a[i]=='i'||a[i]=='o'||a[i]=='u'a[i]=='b'||a[i]=='c'||a[i]=='d'||a[i]=='f'||a[i]=='g'||a[i]=='h'||a[i]=='j'||a[i]=='n'||a[i]=='m'||a[i]=='l'||a[i]=='k'||a[i]=='p'||a[i]=='q'||a[i]=='r'||a[i]=='s'||a[i]=='w'||a[i]=='v'||a[i]=='t'||a[i]=='x'||a[i]=='y'||a[i]=='z'){
+            c=c+1;
+        }
+        else if (a[i]==' '){
+            sp+=1;
+        }else if(a[i]=='0'||a[i]=='1'||a[i]=='2'||a[i]=='6'||a[i]=='5'||a[i]=='4'||a[i]=='3'||a[i]=='7'||a[i]=='8'||a[i]=='9'){
+            w+=1;
+        }
+        else{
+            spe+=1;
+        }
+    }
+    printf("digits= %d\n",w+1);
+    printf("UPPER CASE = %d\n",v);
+    printf("lower case = %d\n",c);
+    printf("Space = %d\n",sp);
+    printf("Special = %d\n",spe);
+}

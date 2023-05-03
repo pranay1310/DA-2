@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+    int a,b,c,i=5;
+    int ac,r,o,w;
+    ac=r=o=w=0;
+    while (i!=0){
+    printf("Enter Angle: ");
+    scanf("%d",&a);
+    printf("Enter Angle: ");
+    scanf("%d",&b);
+    printf("Enter Angle: ");
+    scanf("%d",&c);
+    printf("\n\n");
+    if ((a+b+c)==180){
+    if (a>90 | b>90 | c>90){
+        o+=1;
+        i--;
+    }
+    else if (a<90 && b<90 && c<90){
+        ac+=1;
+        i--;
+    }
+    else if (a==90 | b==90 | c==90){
+        r+=1;
+        i--;
+    }
+    }
+    else{
+        w+=1;
+        printf("Wrong Entry !! Try Again\n");
+    }
+    }
+    printf("Acute Angled Triangle %d\n",ac);
+    printf("Obtuse Angled Triangle %d\n",o);
+    printf("Right Angled Triangle %d\n",r);
+    printf("Wrong Entries %d\n",w);
+}

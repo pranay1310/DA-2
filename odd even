@@ -1,0 +1,27 @@
+#include <stdio.h>
+int Sum(){
+    int sum=0;
+    for(int i=1000; i<10000; i+=2) {
+        sum+=i;
+    }
+    while(sum>9){
+        int temp=sum;
+        sum=0;
+        while(temp > 0) {
+            sum += temp % 10;
+            temp /= 10;
+        }
+    }
+    return sum;
+}
+
+int main(){
+    int result=Sum();
+    if(result%2==0){
+        printf("Even found\n");
+    }
+    else {
+        printf("Odd found\n");
+    }
+    return 0;
+}

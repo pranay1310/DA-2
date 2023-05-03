@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main(){
+    int chennai[7], delhi[7], haveri[7], gangtok[7];
+    int i,t;
+    printf("chennai temp\n");
+    for(i = 0; i < 7; i++) {
+        scanf("%d",&t);
+        if (t>=28 && t<=33){
+            chennai[i]=t;
+        }
+    }
+    for(int i = 0; i < 7; i++) {
+        delhi[i] = chennai[i] - 8; 
+        haveri[i] = chennai[i] + 5;
+    }
+    for(int i = 0; i < 7; i++) {
+        gangtok[i] = haveri[i] - delhi[i];
+    }
+    printf("The temperature for Gangtok for the week is:\n");
+    for(int i = 0; i < 7; i++) {
+        printf("%d ", gangtok[i]);
+    }
+}
